@@ -1,0 +1,39 @@
+<div *ngIf="!isLoggedIn" class="dashboard__noAuth">
+    <div class="p-0 dashboard--banner">
+        <h1>Zum Fortfahren</h1>
+        <button mat-raised-button (click)="loginWithRedirect()">Anmelden</button>
+    </div>
+</div>
+
+<div *ngIf="isLoggedIn" class="dashboard__withAuth">
+    <div class="p-0 dashboard--banner">
+        <h1>Willkommen!</h1>
+        <h2>Bitte wähle ein Thema:</h2>
+    </div>
+    <div class="tiles">
+        <div routerLink="/customers" class="dashboard__withAuth--tile tiles--customer">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Kunde</mat-card-title>
+                    <mat-card-subtitle>Kunden verwalten</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div routerLink="/addCustomer" class="dashboard__withAuth--tile tiles--customer">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Kunde</mat-card-title>
+                    <mat-card-subtitle>Neuen Kunden hinzufügen</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+        <div routerLink="/" class="dashboard__withAuth--tile tiles--car">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Autos</mat-card-title>
+                    <mat-card-subtitle>Neues Auto hinzufügen</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+</div>
