@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "schuett-webapp": {
+    "auth0_webapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/schuett-webapp",
+            "outputPath": "dist/auth0_webapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "schuett-webapp:build:production"
+              "browserTarget": "auth0_webapp:build:production"
             },
             "development": {
-              "browserTarget": "schuett-webapp:build:development"
+              "browserTarget": "auth0_webapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "schuett-webapp:build"
+            "browserTarget": "auth0_webapp:build"
           }
         },
         "test": {

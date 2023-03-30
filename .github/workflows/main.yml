@@ -42,7 +42,7 @@ jobs:
         uses: VaultVulp/gp-docker-action@1.5.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} 
-          image-name: schuett-webapp-frontend
+          image-name: auth0_webapp-frontend
           additional-image-tags: ${{ github.run_id }}
 
 

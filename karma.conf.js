@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/schuett-webapp'),
+      dir: require('path').join(__dirname, './coverage/auth0_webapp'),
       subdir: '.',
       reporters: [
         { type: 'html' },
