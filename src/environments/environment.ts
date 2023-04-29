@@ -5,10 +5,10 @@ export const environment = {
 
   backendBasePath: apiUri,
   auth: {
-    domain: "dev-opas-webapp.eu.auth0.com",
-    clientId: "UJuUtkVyLKpIjz2A0zJtaqiAh6O5U56v",
-    audience: "https://opas-webapp-api.com",
-    redirectUri: "http://localhost:4200/dashboard",
+    domain: "kristoffer-schaaf-aclue.us.auth0.com",
+    clientId: "TL59OmwzR2oBBShaRBDtvF0TJjgtPU1J",
+    audience: "https://auth0-aclue-api.com",
+    redirectUri: "http://localhost:4200/",
     errorPath: "/error",
   },
   httpInterceptor: {
