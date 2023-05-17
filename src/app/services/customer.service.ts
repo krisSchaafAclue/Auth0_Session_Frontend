@@ -10,11 +10,11 @@ import { CustomerResponse, GetCustomersResponse } from '../model/CustomerRespons
 })
 export class CustomerService {
   private baseUrl = environment.backendBasePath; 
-  private addCustomerUrl = this.baseUrl + "customer/createCustomer"; 
+  private addCustomerUrl = this.baseUrl + "customer/addCustomer"; 
   private getCustomersUrl = this.baseUrl + "customers"; 
-  private getCustomerByIdUrl = this.baseUrl + "customer"; 
-  private editCustomerByIdUrl = this.baseUrl + "customer"; 
-  private deleteCustomerByIdUrl = this.baseUrl + "customer"; 
+  private getCustomerByIdUrl = this.baseUrl + "customers"; 
+  private editCustomerByIdUrl = this.baseUrl + "customers"; 
+  private deleteCustomerByIdUrl = this.baseUrl + "customers"; 
 
   constructor(private http: HttpClient) { }
 

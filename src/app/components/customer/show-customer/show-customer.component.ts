@@ -29,18 +29,13 @@ export class ShowCustomerComponent implements OnInit{
 
         this.showCustomerForm = new FormGroup({
           salutationFormControl: new FormControl(this.customer.salutation),
-          surnameFormControl: new FormControl(this.customer.surname),
+          firstnameFormControl: new FormControl(this.customer.firstname),
           lastnameFormControl: new FormControl(this.customer.lastname),
           emailFormControl: new FormControl(this.customer.email, [Validators.email]),
-          phonePrivateFormControl: new FormControl(this.customer.telephonePrivate),
-          phoneBusinessFormControl: new FormControl(this.customer.telephoneBusiness),
-          mobileFormControl: new FormControl(this.customer.mobile),
-          faxFormControl: new FormControl(this.customer.fax),
           streetFormControl: new FormControl(this.customer.street),
           housingNumberFormControl: new FormControl(this.customer.housingNumber),
           postalCodeFormControl: new FormControl(this.customer.postalCode),
           cityFormControl: new FormControl(this.customer.city),
-          bankNumberFormControl: new FormControl(this.customer.bankNumber),
           otherFormControl: new FormControl(this.customer.additionalInformation),
         });
       },
@@ -54,8 +49,8 @@ export class ShowCustomerComponent implements OnInit{
     return this.showCustomerForm.get('salutationFormControl') as FormControl;
   }
 
-  get surnameFormControl() {
-    return this.showCustomerForm.get('surnameFormControl') as FormControl;
+  get firstnameFormControl() {
+    return this.showCustomerForm.get('firstnameFormControl') as FormControl;
   }
 
   get lastnameFormControl() {
@@ -130,18 +125,13 @@ export class ShowCustomerComponent implements OnInit{
     return {
       id: this.customer.id,
       salutation: this.salutationFormControl.value,
-      surname: this.surnameFormControl.value,
+      firstname: this.firstnameFormControl.value,
       lastname: this.lastnameFormControl.value,
       email: this.emailFormControl.value,
-      telephonePrivate: this.phonePrivateFormControl.value,
-      telephoneBusiness: this.phoneBusinessFormControl.value,
-      mobile: this.mobileFormControl.value,
-      fax: this.faxFormControl.value,
       street: this.streetFormControl.value,
       housingNumber: this.housingNumberFormControl.value,
       postalCode: this.postalCodeFormControl.value,
       city: this.cityFormControl.value,
-      bankNumber: this.bankNumberFormControl.value,
       additionalInformation: this.otherFormControl.value,
     }
   }
