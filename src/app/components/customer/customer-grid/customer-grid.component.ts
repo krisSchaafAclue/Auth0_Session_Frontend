@@ -20,18 +20,13 @@ export class CustomerGridComponent {
 
   colDefs: ColDef[] = [
     { field: 'salutation', headerName: 'Anrede' },
-    { field: 'surname', headerName: 'Vorname' },
+    { field: 'firstname', headerName: 'Vorname' },
     { field: 'lastname', headerName: 'Nachname' },
     { field: 'email', headerName: 'E-Mail' },
-    { field: 'telephonePrivate', headerName: 'Telefon Privat' },
-    { field: 'telephoneBusiness', headerName: 'Telefon Gesch.' },
-    { field: 'mobile', headerName: 'Handy' },
-    { field: 'fax', headerName: 'Fax' },
     { field: 'street', headerName: 'Straße' },
     { field: 'housingNumber', headerName: 'Hausnummer' },
     { field: 'postalCode', headerName: 'PLZ' },
     { field: 'city', headerName: 'Stadt' },
-    { field: 'bankNumber', headerName: 'Banknummer' },
     { field: 'additionalInformation', headerName: 'Sonstiges' },
   ];
 
@@ -42,8 +37,8 @@ export class CustomerGridComponent {
 
   ngOnInit() {
     this.customerService.getCustomers().subscribe({
-      next: (value) => {
-        this.rowData = value.data.data;
+      next: (customers) => {
+        this.rowData = customers;
       },
       error: () => {
         this.notificationService.notify('Etwas ist schiefgelaufen. Bitte versuch es noch einmal.');

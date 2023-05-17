@@ -14,7 +14,7 @@ const DISABLED_ROUTES = [
 export class GoBackComponent implements OnInit {
   disabled!: boolean;
 
-  constructor(private _location: Location, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((val) => {    
@@ -23,7 +23,6 @@ export class GoBackComponent implements OnInit {
   }
 
   backClicked() {
-    // this._location.back();
     this.router.navigate([".."]);
   }
 

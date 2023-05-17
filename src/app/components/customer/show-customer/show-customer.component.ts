@@ -23,8 +23,8 @@ export class ShowCustomerComponent implements OnInit{
     const customerId = this.route.snapshot.queryParamMap.get('id');
 
     this.customerService.getCustomerById(customerId!).subscribe({
-      next: (value) => {
-        this.customer = value.data.data;
+      next: (customer) => {
+        this.customer = customer;
         this.contentLoaded = true;
 
         this.showCustomerForm = new FormGroup({
