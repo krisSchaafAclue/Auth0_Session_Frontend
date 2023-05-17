@@ -16,9 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatDialogModule } from '@angular/material/dialog';
 
-import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { environment as env } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatIconModule } from '@angular/material/icon';
@@ -65,18 +63,8 @@ import { GoBackComponent } from './components/go-back/go-back.component';
     MatSnackBarModule,
     MatDialogModule,
     AgGridModule,
-    AuthModule.forRoot({
-      ...env.auth,
-      httpInterceptor: {
-        ...env.httpInterceptor,
-      },
-    }),
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthHttpInterceptor,
-    multi: true,
-  },
+  providers: [
   {
     provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
     useValue: { appearance: 'outline' }

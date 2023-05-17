@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
+// import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,15 +9,15 @@ import { AuthService } from '@auth0/auth0-angular';
 export class DashboardComponent implements OnInit{
   isLoggedIn!: boolean;
 
-  constructor(public auth: AuthService) {}
+  // constructor(public auth: AuthService) {}
 
   ngOnInit(): void {
-    this.auth.isAuthenticated$.subscribe((result) => {
-      this.isLoggedIn = result;
-    })
+    // this.auth.isAuthenticated$.subscribe((result) => {
+    //   this.isLoggedIn = result;
+    // })
   }
 
   loginWithRedirect() {
-    this.auth.loginWithRedirect();
+    // this.auth.loginWithRedirect();
   }
 }
