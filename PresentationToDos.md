@@ -1,5 +1,7 @@
 # TODOs
 
+### [click here for official auth0 doc](https://auth0.com/docs/quickstart/spa/angular/01-login)
+
 ## app.module.ts
 
 ```typescript
