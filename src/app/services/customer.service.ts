@@ -9,11 +9,13 @@ import { Customer, CustomerDTO } from '../model/customer';
 })
 export class CustomerService {
   private baseUrl = environment.backendBasePath; 
-  private addCustomerUrl = this.baseUrl + "customers/addCustomer"; 
-  private getCustomersUrl = this.baseUrl + "customers"; 
-  private getCustomerByIdUrl = this.baseUrl + "customers"; 
-  private editCustomerByIdUrl = this.baseUrl + "customers"; 
-  private deleteCustomerByIdUrl = this.baseUrl + "customers"; 
+  private customerUrl = "customers";
+
+  private addCustomerUrl = this.baseUrl + this.customerUrl; 
+  private getCustomersUrl = this.baseUrl + this.customerUrl; 
+  private getCustomerByIdUrl = this.baseUrl + this.customerUrl; 
+  private editCustomerByIdUrl = this.baseUrl + this.customerUrl; 
+  private deleteCustomerByIdUrl = this.baseUrl + this.customerUrl; 
 
   constructor(private http: HttpClient) { }
 
