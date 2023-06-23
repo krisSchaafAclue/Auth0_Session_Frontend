@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,15 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit{
   isLoggedIn!: boolean;
 
-  // constructor(public auth: AuthService) {}
-
   ngOnInit(): void {
-    // this.auth.isAuthenticated$.subscribe((result) => {
-    //   this.isLoggedIn = result;
-    // })
+    this.isLoggedIn = false;
   }
 
   loginWithRedirect() {
-    // this.auth.loginWithRedirect();
   }
 }

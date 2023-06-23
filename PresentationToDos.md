@@ -27,9 +27,9 @@ providers: [{
 
 ```typescript
  auth: {
-    domain: "kristoffer-schaaf-aclue.us.auth0.com",
-    clientId: "TL59OmwzR2oBBShaRBDtvF0TJjgtPU1J",
-    audience: "https://auth0-aclue-api.com",
+    domain: {{ domain }},
+    clientId: {{ clientId }},
+    audience: {{ audience }},
     redirectUri: "http://localhost:4200/",
     errorPath: "/error",
   },
@@ -49,10 +49,14 @@ import { AuthGuard } from '@auth0/auth0-angular';
   { path: 'customer', component: ShowCustomerComponent, canActivate: [AuthGuard] },
 ```
 
-## header.component.ts
+## header.component.ts (some parts in dashboard.component.ts as well)
 
 ```typescript
 import { AuthService } from '@auth0/auth0-angular';
+
+...
+
+isLoggedIn!: boolean;
 
 constructor(
     public auth: AuthService,

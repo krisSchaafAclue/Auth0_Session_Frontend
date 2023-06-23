@@ -7,14 +7,16 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isCollapsed = true;
-  isLoggedIn = false;
+  isCollapsed!: boolean;
+  isLoggedIn!: boolean;
   
   constructor(
     @Inject(DOCUMENT) private doc: Document
   ) {}
 
   ngOnInit(): void {
+    this.isCollapsed = true;
+    this.isLoggedIn = false;
   }
 
   loginWithRedirect() {
