@@ -8,8 +8,8 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isCollapsed = true;
-  isLoggedIn = false;
+  isCollapsed!: boolean;
+  isLoggedIn!: boolean;
   
   constructor(
     public auth: AuthService,
@@ -17,6 +17,8 @@ export class HeaderComponent {
   ) {}
 
   ngOnInit(): void {
+    this.isCollapsed = true;
+    
     this.auth.isAuthenticated$.subscribe((result) => {
       this.isLoggedIn = result;
     })
